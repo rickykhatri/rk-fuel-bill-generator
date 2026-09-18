@@ -1,7 +1,9 @@
 {
-  "name": "react-example",
+  "name": "fuel-bill-cash-memo-generator",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Fuel station cash and credit memo receipt generator with fillable fields, print formatting, and logo customization.",
+  "author": "Ricky Khatri",
   "type": "module",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
@@ -27,7 +29,7 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "autoprefixer": "^10.4.21",
-    "esbuild": "^0.25.0",
+    "esbuild": "^0.28.0",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.21.0",
     "typescript": "^7.0.2",

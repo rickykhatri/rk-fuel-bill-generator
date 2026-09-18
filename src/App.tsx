@@ -284,7 +284,18 @@ export default function App() {
         </div>
       </main>
 
-      {/* 4. Signature Pad Modal (when drawing custom signature) */}
+      {/* 4. Footer with Credits & Copyright (Hidden in print mode) */}
+      <footer className="no-print mt-auto py-6 border-t border-neutral-200/80 bg-white/70 text-center text-xs text-neutral-500">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
+          <span>
+            Designed &amp; Developed by <strong className="font-semibold text-neutral-800">Ricky Khatri</strong>
+          </span>
+          <span className="hidden sm:inline text-neutral-300">•</span>
+          <span>© {new Date().getFullYear()} All rights reserved.</span>
+        </div>
+      </footer>
+
+      {/* 5. Signature Pad Modal (when drawing custom signature) */}
       {isSignaturePadOpen && (
         <SignaturePad
           onSave={(dataUrl) => {
