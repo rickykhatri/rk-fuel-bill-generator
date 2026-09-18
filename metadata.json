@@ -1,0 +1,6 @@
+{
+  "name": "Fuel Bill & Cash Memo Generator",
+  "description": "Customizable fuel station cash and credit memo receipt generator with fillable fields and exact printout formatting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

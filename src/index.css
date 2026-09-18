@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-receipt-serif {
+    font-family: 'Libre Baskerville', Georgia, serif;
+  }
+  .font-handwritten {
+    font-family: 'Caveat', 'Kalam', cursive;
+  }
+  .font-stamp {
+    font-family: 'Courier Prime', 'Special Elite', monospace;
+  }
+  .font-sans-ui {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+/* Print specific styles */
+@media print {
+  @page {
+    margin: 10mm;
+    size: auto;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .receipt-page-wrapper {
+    padding: 0 !important;
+    margin: 0 auto !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+  }
+
+  .receipt-paper-slip {
+    width: 410px !important;
+    max-width: 410px !important;
+    min-width: 380px !important;
+    box-shadow: none !important;
+    border-radius: 14px !important;
+    margin: 10px auto !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    background-color: #ffffff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Keep table borders and text sharp in print */
+  .receipt-paper-slip * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Remove input focus outlines and shadows in print */
+  input, textarea, select {
+    border-color: transparent !important;
+    outline: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color-scheme: light !important;
+  }
+
+  /* Ensure dotted lines stay visible in print */
+  .border-dotted {
+    border-style: dotted !important;
+  }
+}
+
+/* Custom dashed underline for filled items */
+.dotted-fill-line {
+  border-bottom: 1px dotted currentColor;
+}
