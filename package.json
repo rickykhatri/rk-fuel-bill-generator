@@ -1,5 +1,5 @@
 {
-  "name": "fuel-bill-cash-memo-generator",
+  "name": "react-example",
   "private": true,
   "version": "1.0.0",
   "description": "Fuel station cash and credit memo receipt generator with fillable fields, print formatting, and logo customization.",
