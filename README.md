@@ -74,12 +74,25 @@ Access the app in your browser at `http://localhost:8080`.
 
 ## 🌐 Deploy to GitHub Pages
 
-This project is pre-configured for GitHub Pages:
+If your GitHub Pages URL displays a blank page, it is because GitHub Pages is trying to serve raw TypeScript source files (`/src/main.tsx`) directly instead of the compiled production bundle (`dist/`).
 
-1. Push this repository to GitHub on the `main` branch.
-2. In your repository, go to **Settings** > **Pages**.
-3. Under **Build and deployment** > **Source**, choose **GitHub Actions**.
-4. The workflow will automatically build and publish your site at `https://<username>.github.io/<repo-name>/`.
+### Option 1: Automated Deployment via GitHub Actions (Recommended)
+1. Commit and push your files to GitHub (`main` branch).
+2. In your repository on GitHub, navigate to **Settings** > **Pages** (in the left sidebar).
+3. Under **Build and deployment** > **Source**, switch the dropdown from **Deploy from a branch** to:
+   👉 **GitHub Actions**
+4. Go to the **Actions** tab at the top of your GitHub repository.
+5. Click **Deploy to GitHub Pages** in the left menu, then click **Run workflow** > **Run workflow**.
+6. Once the checkmark turns green (takes ~30 seconds), your live site at `https://rickykhatri.github.io/rk-fuel-bill-generator/` will work seamlessly.
+
+### Option 2: 1-Command Deployment via `gh-pages` Branch
+If you want GitHub to deploy directly from a branch:
+```bash
+# Builds dist and pushes compiled output to the gh-pages branch
+GITHUB_REPOSITORY="rickykhatri/rk-fuel-bill-generator" npm run build
+npm run deploy
+```
+Then in **Settings** > **Pages**, set **Source** to **Deploy from a branch** and select the branch **`gh-pages`** / `(root)`.
 
 ---
 
